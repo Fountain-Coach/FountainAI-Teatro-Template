@@ -1,19 +1,32 @@
-// swift-tools-version:5.9
+// swift-tools-version: 6.1
 import PackageDescription
 
 let package = Package(
     name: "FountainModule",
-    platforms: [.macOS(.v13)],
-    products: [
-        .executable(name: "FountainModule", targets: ["FountainModule"]),
+    platforms: [
+        .macOS(.v14)
     ],
-    dependencies: [],
+    products: [
+        .executable(
+            name: "FountainModule",
+            targets: ["FountainModule"]
+        )
+    ],
+    dependencies: [
+        // Add Teatro or FountainAI packages here
+    ],
     targets: [
         .executableTarget(
             name: "FountainModule",
-            dependencies: []),
+            dependencies: [],
+            swiftSettings: [
+                // ✅ This is the real, working way to enforce strict concurrency today
+                .unsafeFlags(["-Xfrontend", "-strict-concurrency=complete"])
+            ]
+        ),
         .testTarget(
             name: "FountainModuleTests",
-            dependencies: ["FountainModule"]),
+            dependencies: ["FountainModule"]
+        )
     ]
 )

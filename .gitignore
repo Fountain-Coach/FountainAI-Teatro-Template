@@ -1,0 +1,51 @@
+
+# Swift Package Manager
+.build/
+.swiftpm/xcode/
+
+# Xcode
+DerivedData/
+*.xcworkspace/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/xcshareddata/
+
+# User settings
+*.xcuserdatad
+*.xcuserdata
+*.DS_Store
+
+# Playground / SwiftUI Previews
+timeline.xctimeline
+playground.xcworkspace
+*.playground
+*.playgroundbook
+
+# macOS junk
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor backups
+*~.nib
+*~.swp
+*~.swo
+*.bak
+*.tmp
+
+# Logs and diagnostics
+*.log
+*.xcresult
+*.diagnostic.log
+
+# FountainAI-specific
+data/corpora/
+output/
+generated/
+.DS_Store
