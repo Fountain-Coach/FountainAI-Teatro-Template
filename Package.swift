@@ -13,12 +13,16 @@ let package = Package(
         )
     ],
     dependencies: [
-        // Add Teatro or FountainAI packages here
+        .package(url: "https://github.com/Fountain-Coach/codex-deployer", branch: "main"),
+        .package(url: "https://github.com/Fountain-Coach/Teatro", branch: "main")
     ],
     targets: [
         .executableTarget(
             name: "FountainModule",
-            dependencies: [],
+            dependencies: [
+                .product(name: "CodexDeployer", package: "codex-deployer"),
+                .product(name: "Teatro", package: "Teatro")
+            ],
             swiftSettings: [
                 // ✅ This is the real, working way to enforce strict concurrency today
                 .unsafeFlags(["-Xfrontend", "-strict-concurrency=complete"])
