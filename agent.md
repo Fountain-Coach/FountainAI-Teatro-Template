@@ -48,3 +48,12 @@ This project is a **strict Swift Package**, conforming to canonical layout rules
 | `.md`      | ✅        | Markdown summary or reflection output                                          |
 | `.ump`     | ✅        | Full MIDI 2.0 output of semantic timeline — gesture, timing, and interaction   |
 | `.mid`     | ❌        | Legacy MIDI 1 export, derived from `.ump` if required by downstream tools      |
+
+---
+
+## 📦 Dependencies
+
+This template links against two FountainAI packages:
+
+- [`codex-deployer`](https://github.com/Fountain-Coach/codex-deployer) providing the `CodexDeployer` product
+- [`Teatro`](https://github.com/Fountain-Coach/Teatro) providing the `Teatro` product
